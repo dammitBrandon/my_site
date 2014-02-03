@@ -6,11 +6,6 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
 
-    <!-- syntax highlighting CSS
-    <link rel="stylesheet" href="/css/syntax.css"> -->
-
-    <!-- Custom CSS
-    <link rel="stylesheet" href="/css/main.css"> -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet" />
 
     <script src="js/jquery.min.js"></script>
@@ -47,11 +42,12 @@
                         <ul>
                             <li class="current_page_item"><a href="index.html">Home</a></li>
                             <li><a href="#">Blog Posts</a></li>
+                            <li><a href="#main-wrapper">My Story</a> </li>
+                            <li><a href="#footer-wrapper">What I stand for</a></li>
                         </ul>
-                    </nav>
+                    </nav> <!-- nav -->
                 </section>
-
-            </div>
+          </div>
         </div>
 
         <div class="row">
@@ -59,17 +55,17 @@
                 <!-- banner -->
                 <section id="banner">
                     <a href="#">
-                        <span class="image image-full"><img src="images/me_01.jpg" alt=""></span>
+                        <span class="image image-full"><img src="images/me.jpg" alt=""></span>
                         <header>
                             <span class="byline">A little insight into my world</span>
                         </header>
                     </a>
-                </section>
+                </section> <!-- banner -->
             </div>
         </div>
 
     </div>
-</div>
+</div> <!-- header wrapper -->
 
 <!-- Main Wrapper -->
 <div id="main-wrapper">
@@ -81,8 +77,6 @@
                 </header>
 
                 <p>
-
-
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed risus erat. Mauris rutrum ligula et ipsum imperdiet, id vulputate elit rutrum. In ornare turpis in turpis semper, non pretium erat interdum. Ut semper vel orci at malesuada. Proin non dui nec nulla vestibulum aliquam quis id magna. Sed ipsum tortor, malesuada et augue eget, dignissim imperdiet lorem. Proin eleifend porta magna sed interdum. Curabitur varius orci a diam sagittis faucibus. Nullam risus odio, pretium a diam et, commodo pellentesque mauris. Pellentesque mattis mauris ut placerat pharetra. Aliquam erat volutpat. Nam aliquet orci non turpis laoreet, sed commodo dolor lobortis. Duis varius aliquet neque ac tristique. Donec turpis turpis, molestie quis leo quis, adipiscing tincidunt lorem. Proin et lacus sit amet purus egestas fringilla id at massa.
 
                     Pellentesque placerat interdum tempor. Nunc pharetra diam non auctor posuere. Fusce blandit auctor mi, ut pulvinar elit tempor quis. Donec interdum, magna id blandit iaculis, neque diam rhoncus velit, vel euismod tellus elit a dolor. Nullam bibendum odio at malesuada fermentum. Cras in blandit mi. Ut sit amet metus dui. Suspendisse posuere feugiat facilisis. Nullam ut enim et tortor sollicitudin scelerisque non ut mauris. Vestibulum tincidunt dapibus lectus, nec ultricies velit facilisis vitae. Aenean faucibus neque eu gravida auctor. Praesent tempus eros ac urna tincidunt, ut tincidunt eros mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non neque malesuada, mattis ante a, laoreet felis.
@@ -95,9 +89,9 @@
                 </p>
 
             </div>
-            <div class="12u">
+            <!-- <div class="12u">
                 {{ content }}
-            </div>
+            </div> -->
         </div>
     </div>
 </div> <!-- Main Wrapper -->
@@ -176,22 +170,26 @@
 
     </div>
 
-    <!--<div class="footer">-->
-    <!--<div class="contact">-->
-    <!--<p>-->
-    <!--Your Name<br />-->
-    <!--What You Are<br />-->
-    <!--you@example.com-->
-    <!--</p>-->
-    <!--</div>-->
-    <!--<div class="contact">-->
-    <!--<p>-->
-    <!--<a href="https://github.com/yourusername">github.com/yourusername</a><br />-->
-    <!--<a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />-->
-    <!--</p>-->
-    <!--</div>-->
-    <!--</div>-->
-</div>
+    <div class="row">
+        <div class="12u">
+            <!-- loved ones who passed -->
+            <div id="copyright">
+                <section>
+                    <header>
+                        <h2>
+                            My loved ones who moved on
+                        </h2>
+                    </header>
+                <ul class="links">
+                    <li>RIP Ranaldo Butler</li>
+                    <li>RIP Calrin Biles</li>
+                    <li>RIP Gerrod Wislon</li>
+                </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</div> <!-- footer wrapper -->
 
 </body>
 

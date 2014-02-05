@@ -3,11 +3,80 @@ layout: default
 title: The virtually limited space of BBailey
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<!-- Main Wrapper -->
+<div id="main-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+                <section>
+                    <header class="major">
+                        <h2>My Story</h2>
+                    </header>
+
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed risus erat. Mauris
+                            rutrum ligula et ipsum imperdiet, id vulputate elit rutrum. In ornare turpis in turpis
+                            semper, non pretium erat interdum. Ut semper vel orci at malesuada. Proin non dui nec nulla
+                            vestibulum aliquam quis id magna. Sed ipsum tortor, malesuada et augue eget, dignissim
+                            imperdiet lorem. Proin eleifend porta magna sed interdum. Curabitur varius orci a diam
+                            sagittis faucibus. Nullam risus odio, pretium a diam et, commodo pellentesque mauris.
+                            Pellentesque mattis mauris ut placerat pharetra. Aliquam erat volutpat. Nam aliquet orci non
+                            turpis laoreet, sed commodo dolor lobortis. Duis varius aliquet neque ac tristique. Donec
+                            turpis turpis, molestie quis leo quis, adipiscing tincidunt lorem. Proin et lacus sit amet
+                            purus egestas fringilla id at massa.
+
+                            Pellentesque placerat interdum tempor. Nunc pharetra diam non auctor posuere. Fusce blandit
+                            auctor mi, ut pulvinar elit tempor quis. Donec interdum, magna id blandit iaculis, neque
+                            diam rhoncus velit, vel euismod tellus elit a dolor. Nullam bibendum odio at malesuada
+                            fermentum. Cras in blandit mi. Ut sit amet metus dui. Suspendisse posuere feugiat facilisis.
+                            Nullam ut enim et tortor sollicitudin scelerisque non ut mauris. Vestibulum tincidunt
+                            dapibus lectus, nec ultricies velit facilisis vitae. Aenean faucibus neque eu gravida
+                            auctor. Praesent tempus eros ac urna tincidunt, ut tincidunt eros mollis. Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit. Ut non neque malesuada, mattis ante a, laoreet felis.
+
+                            Quisque nunc nibh, rhoncus nec tortor vitae, mattis blandit metus. Quisque mollis ut erat in
+                            aliquet. Sed tincidunt velit vel luctus convallis. Vestibulum vel elit eget quam dictum
+                            volutpat. Fusce eget convallis sapien. Praesent porttitor molestie massa sit amet
+                            scelerisque. Vestibulum gravida vitae nulla vitae semper. Nulla et odio aliquam, venenatis
+                            purus ac, egestas dolor. Fusce tincidunt tristique arcu, nec convallis mi rhoncus at. Donec
+                            tortor mauris, condimentum sit amet aliquam vitae, pretium at sapien.
+
+                            Sed tempor nisl ut lectus aliquet placerat. Cras adipiscing molestie ornare. Fusce tortor
+                            eros, facilisis ut leo vitae, suscipit condimentum ante. Curabitur porttitor augue eget
+                            purus gravida dapibus eu ut nisi. Pellentesque malesuada blandit ligula eget sagittis. Proin
+                            ac sollicitudin erat, quis ultrices ipsum. Nulla eget suscipit metus. Proin congue semper
+                            lobortis. Praesent nec imperdiet sem, vitae molestie nunc. Donec quis odio mi. Ut luctus
+                            mollis quam, adipiscing tincidunt sapien porta vitae. Donec varius at justo vitae rhoncus.
+
+                            Donec libero ligula, tempus a risus eget, ornare condimentum tellus. In non sagittis risus.
+                            Ut tempor arcu sed urna malesuada, vitae tincidunt dolor congue. Integer condimentum, augue
+                            at tempor interdum, erat nunc porttitor tortor, eu feugiat ligula nisl ut massa. Curabitur
+                            semper et magna molestie pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus
+                            et ultrices posuere cubilia Curae; Nunc euismod bibendum mi tincidunt suscipit.
+                        </p>
+                    </div>
+
+                </section>
+            </div>
+            <div id="blog-posts" class="12u"> <!-- Blog section -->
+                <section>
+                    <header class="major">
+                        <h2>My Blog Posts</h2>
+                    </header>
+                    <div class="row">
+                        <!-- the blog posts section -->
+                        <div id="home">
+                            <ul class="posts">
+                                {% for post in site.posts %}
+                                <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div> <!-- Blog Section -->
+        </div>
+    </div>
 </div>
+<!-- Main Wrapper -->

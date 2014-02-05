@@ -366,7 +366,8 @@
 			height: 13em;
 			
 			margin-left: -25em;
-			margin-top: -6.5em;
+			//margin-top: -6.5em;
+            margin-top: 8.5em;
 		}
 		
 			#banner header h2

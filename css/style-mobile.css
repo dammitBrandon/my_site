@@ -234,7 +234,18 @@
 			top: -2.5em;
 		}
 
-	#footer-wrapper
+#post-wrapper
+{
+    /*min-height: 10em;*/
+    height: auto;
+    background-image: url('../images/me3.jpg');
+    background-repeat:no-repeat;
+    background-size: contain;
+
+}
+
+
+#footer-wrapper
 	{
 		padding: 0 25px 0 25px;
 		overflow: hidden;

@@ -1057,7 +1057,12 @@
 			{
 				background: #f7f7f7 url('images/bg02.png');
 			}
-	
+
+    #post-wrapper
+    {
+        background: url('images/bg01.png');
+    }
+
 	#footer-wrapper
 	{
 		position: relative;

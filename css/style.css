@@ -26,7 +26,7 @@
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
 		background: #252122;
-		background-image: url('images/bg02.png');
+		background-image: url('../assets/images/bg02.png');
 		color: #5d5d5d;
 	}
 
@@ -207,7 +207,7 @@
 			display: inline-block;
 			width: 48px;
 			height: 48px;
-			background-image: url('images/icons48.png');
+			background-image: url('../assets/images/icons48.png');
 			text-indent: -9999px;
 		}
 		
@@ -227,7 +227,7 @@
 			display: inline-block;
 			width: 64px;
 			height: 64px;
-			background-image: url('images/icons64.png');
+			background-image: url('../assets/images/icons64.png');
 			text-indent: -9999px;
 		}
 		
@@ -1005,7 +1005,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url('images/bg02.png');
+			background: url('../assets/images/bg02.png');
 			z-index: 0;
 			opacity: 0.5;
 			box-shadow: inset 0px -60px 40px 0px #fff;
@@ -1018,7 +1018,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url('images/bg01.png');
+			background: url('../assets/images/bg01.png');
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.25;
@@ -1033,7 +1033,7 @@
 	#main-wrapper
 	{
 		position: relative;
-		background: #f7f7f7 url('images/bg02.png');
+		background: #f7f7f7 url('../assets/images/bg02.png');
 	}
 
 		#main-wrapper:before
@@ -1043,7 +1043,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url('images/bg01.png');
+			background: url('../assets/images/bg01.png');
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.1;
@@ -1055,12 +1055,12 @@
 		
 			#main-wrapper .major h2
 			{
-				background: #f7f7f7 url('images/bg02.png');
+				background: #f7f7f7 url('../assets/images/bg02.png');
 			}
 
     #post-wrapper
     {
-        background: url('images/bg01.png');
+        background: url('../assets/images/bg01.png');
     }
 
 	#footer-wrapper
@@ -1076,7 +1076,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url('images/bg01.png');
+			background: url('../assets/images/bg01.png');
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.5;

@@ -1,5 +1,31 @@
-name: Team BBailey
+name: 'Team BBailey'
 markdown: redcarpet
-highlighter: true
+highlighter: pygments
+exclude: [
+  'node_modules',
+  'bower_components',
+  'bower.json',
+  'Gruntfile.js',
+  'package.json',
+  'Gemfile',
+  'Gemfile.lock',
+  'css',
+  'sass',
+  'js',
+  'env',
+  'tmp'
+  ]
 
+assets:
+  root_url: '/assets'
+  
+images:
+  root_url: '/assets/img'
+  retina: true
+  retina_suffix: '@2x'
+  lazy: true
+  lazy_placeholder: 'loading.gif'
+  
+disqus:
+  shortname: 'BBailey'
 #url: http://localhost:4000

@@ -1,11 +1,25 @@
 {
   "name": "bbailey",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "My personal site",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Brandon T. Bailey",
-  "license": "BSD-2-Clause"
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "matchdep": "~0.3.0",
+    "grunt-browserify": "~1.2.12",
+    "grunt-contrib-compass": "~0.7.0",
+    "grunt-contrib-cssmin": "~0.8.0",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-jekyll": "~0.4.1",
+    "bower": "*",
+    "grunt-exec": "*",
+    "grunt-contrib-copy": "*"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
 }

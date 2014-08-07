@@ -163,7 +163,7 @@
 			top: 10px;
 			width: 50px;
 			height: 40px;
-			background: rgba(150,150,150,0.35) url('../assets/images/mobileUI-site-nav-opener-bg.svg') 12px 14px no-repeat;
+			background: rgba(150,150,150,0.35) url('images/mobileUI-site-nav-opener-bg.svg') 12px 14px no-repeat;
 			border-radius: 5px;
 		}
 
@@ -179,7 +179,7 @@
 	#navPanel
 	{
 		color: #858484;
-		background-image: url('../assets/images/bg02.png');
+		background-image: url('images/bg02.png');
 		box-shadow: inset -3px 0px 5px 0px rgba(0,0,0,0.35);
 	}
 
@@ -236,11 +236,12 @@
 
 #post-wrapper
 {
-    min-height: 30em;
+    /*min-height: 10em;*/
+    height: auto;
     background-image: url('../images/me3.jpg');
     background-repeat:no-repeat;
-    background-position: 50% 0;
-    background-size: 50%;
+    background-size: contain;
+
 }
 
 

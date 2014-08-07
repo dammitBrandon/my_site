@@ -2,10 +2,12 @@
   "name": "bbailey",
   "version": "0.0.1",
   "devDependencies": {
+    "bootstrap": "~3.0.0",
     "bootstrap-sass": "git://github.com/twbs/bootstrap-sass.git#~3.1.1",
     "jquery": "2.1.0",
     "JAIL": "https://github.com/sebarmeli/JAIL.git#3f10d36bc0a9ae1946aac79a38c7ab4c474bed7f",
     "fastclick": "~0.6.10",
-    "fontawesome": "4.0.3"
+    "fontawesome": "4.0.3",
+    "skeljs": "0.4"
   }
 }

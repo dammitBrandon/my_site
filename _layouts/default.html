@@ -12,17 +12,19 @@
   {% if site.env == 'production' %}
     <link rel="stylesheet" href="/build/style.min.css"/>
   {% else %}
-    <link rel="stylesheet" href="{{ base.url }}/css/skel-noscript.css"/>
-    <link rel="stylesheet" href="{{base.url}}/css/style.css"/>
-    <link rel="stylesheet" href="{{ base.url }}/css/style-desktop.css"/>
+    <!--<link rel="stylesheet" href="{{ base.url }}/css/skel-noscript.css"/>-->
+    <!--<link rel="stylesheet" href="{{base.url}}/css/style.css"/>-->
+    <!--<link rel="stylesheet" href="{{ base.url }}/css/style-desktop.css"/>-->
+  <link rel="stylesheet" href="/debug/main.css">
+  <link rel="stylesheet" href="/debug/style.css">
   {% endif %}
 
 
-  <noscript>
-    <link rel="stylesheet" href="{{ base.url }}/css/skel-noscript.css"/>
-    <link rel="stylesheet" href="{{base.url}}/css/style.css"/>
-    <link rel="stylesheet" href="{{ base.url }}/css/style-desktop.css"/>
-  </noscript>
+  <!--<noscript>-->
+    <!--<link rel="stylesheet" href="{{ base.url }}/css/skel-noscript.css"/>-->
+    <!--<link rel="stylesheet" href="{{base.url}}/css/style.css"/>-->
+    <!--<link rel="stylesheet" href="{{ base.url }}/css/style-desktop.css"/>-->
+  <!--</noscript>-->
 
   <!--[if lte IE 8]/>
   <script src="js/html5shiv.js></script><link rel="stylesheet" href="css/ie8.css" />
@@ -51,12 +53,14 @@
 
 {% if site.env == 'production'%}
   <script src="/build/app.min.js"></script>
+  
 {% else %}
-  <script src="{{ base.url }}/js/jquery.min.js"></script>
-  <script src="{{ base.url }}/js/jquery.dropotron.min.js"></script>
-  <script src="{{ base.url }}/js/config.js"></script>
-  <script src="{{ base.url }}/js/skel.min.js"></script>
-  <script src="{{ base.url }}/js/skel-panels.min.js"></script>
+<script src="/debug/app.js"></script>
+  <!--<script src="{{ base.url }}/js/jquery.min.js"></script>-->
+  <!--<script src="{{ base.url }}/js/jquery.dropotron.min.js"></script>-->
+  <!--<script src="{{ base.url }}/js/config.js"></script>-->
+  <!--<script src="{{ base.url }}/js/skel.min.js"></script>-->
+  <!--<script src="{{ base.url }}/js/skel-panels.min.js"></script>-->
 {% endif %}
 
 </body>

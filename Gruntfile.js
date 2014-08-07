@@ -1,71 +1,173 @@
 module.exports = function (grunt) {
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-copy');
+  require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.initConfig({
-    less: {
-      production: {
-        options: {
-          paths: ["bower_components/bootstrap/less"],
-          yuicompress: true
-        },
-        files: {
-          "assets/css/application.min.css": "assets/_less/application.less"
-        }
-      }
+
+    meta: {
+      scripts: [
+        'js/**/*.js'
+      ],
+      styles: [
+        'sass/**/*.scss',
+        'css/**/*.css'
+      ]
     },
-    sass: {
-      production: {
-        options: {
-          paths: ["bower_components/bootstrap/sass"],
-          yuicompress: true
-        },
-        files: {
-          "assets/css/application.min.css": "assets/_sass/application.sass"
-        }
-      }
-    },
-    uglify: {
-      jquery: {
-        files: {
-          'assets/js/jquery.min.js': 'bower_components/jquery/jquery.js'
+
+    // Combine JS modules using Browserify
+    browserify: {
+      options: {
+        // Shim 3rd party libraries
+        shim: {
+          'bootstrap': {path: 'bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap.js', exports: 'bootstrap'},
+          'jquery': {path: 'bower_components/jquery/dist/jquery.js', exports: 'jQuery'},
+          'fastclick': {path: 'bower_components/fastclick/lib/fastclick.js', exports: 'jQuery'},
+          'jquery-jail': {path: 'bower_components/JAIL/src/jail.js', exports: 'jail'},
+          'skeljs': {path: 'bower_components/skeljs/src/skel.js', exports: 'skel'}
+
         }
       },
-      bootstrap: {
-        files: {
-          'assets/js/bootstrap.min.js': ['bower_components/bootstrap/js/bootstrap-collapse.js',
-            'bower_components/bootstrap/js/bootstrap-scrollspy.js',
-            'bower_components/bootstrap/js/bootstrap-button.js',
-            'bower_components/bootstrap/js/bootstrap-affix.js']
+      debug: {
+        src: ['app/main.js'],
+        dest: 'debug/app.js',
+        options: {
+          debug: true
         }
-      }
-    },
-    copy: {
-      bootstrap: {
-        files: [
-          {expand: true, cwd: 'bower_components/bootstrap/img/', src: ['**'], dest: 'assets/img/'}
-        ]
-      }
-    },
-    exec: {
+      },
       build: {
-        cmd: 'jekyll build'
+        src: ['app/main.js'],
+        dest: 'build/app.js'
+      }
+    },
+
+//    Compile Sass files to CSS
+    compass: {
+      options: {
+        require: 'compass-inuit',
+        sassDir: 'sass'
       },
-      serve: {
-        cmd: 'jekyll serve --watch'
+      debug: {
+        options: {
+          cssDir: 'debug',
+//          for source maps
+          debugInfo: true,
+          outputStyle: 'expanded'
+        }
+      },
+      build: {
+        options: {
+          cssDir: 'build'
+        }
+      }
+    },
+
+//    Concatenate files
+    concat: {
+      debug: {
+        files: {
+          'debug/style.css': ['css/style.css', 'css/syntax.css']
+        }
+      },
+      build: {
+        files: {
+          'build/style.css': ['build/main.css', 'css/main.css', 'css/style.css']
+        }
+      }
+    },
+
+//    Minify CSS files
+    cssmin: {
+      build: {
+        files: {
+          'build/style.min.css': ['build/style.css']
+        }
+      }
+    },
+
+//    Minify JS files
+    uglify: {
+      build: {
+        files: {
+          'build/app.min.js': ['build/app.js']
+        }
+      }
+    },
+
+    watch: {
+      scripts: {
+        files: ['<%= meta.scripts %>'],
+        tasks: ['browserify2:debug']
+      },
+      style: {
+        files: ['<%= meta.styles %>'],
+        tasks: ['compass:debug', 'concat:debug']
+      }
+    },
+
+//    Clean target directories
+    clean: {
+      debug: ['debug'],
+      buildTemp: [
+        'build/main.css',
+        'build/style.css',
+        'build/app.js'
+      ],
+      all: ['debug', 'build']
+    },
+
+//    Run Jekyll commmands
+    jekyll: {
+      server: {
+        options: {
+          serve: true,
+//          Ad the --watch flag i.e. rebuild on file changes
+          watch: true
+        }
+      },
+      build: {
+        options: {
+          serve: false
+        }
       }
     }
+
   });
 
-  grunt.loadNpmTasks('grunt-exec');
+//  Compile JS & CSS, run Jekyll build for production
+  grunt.registerTask('debug', function () {
+    // Rebuild './debug'
+    grunt.task.run([
+      'clean:debug',
+      'compass:debug',
+      'browserify:debug',
+      'concat:debug'
+    ]);
+    // Watch for changes
+    grunt.task.run('watch');
+  });
 
-  grunt.registerTask('default', [ 'sass', 'uglify', 'copy', 'exec:build' ]);
-  grunt.registerTask('build', [ 'sass', 'uglify', 'copy', 'exec:build' ]);
-  grunt.registerTask('watch', ['exec:build', 'exec:serve']);
+  // Alias to `grunt jekyll:server`
+  grunt.registerTask('server', 'jekyll:server');
+
+  // Run Jekyll build with environment set to production
+  grunt.registerTask('jekyll-production', function () {
+    grunt.log.writeln('Setting environment variable JEKYLL_ENV=production');
+    process.env.JEKYLL_ENV = 'production';
+    grunt.task.run('jekyll:build');
+  });
+
+  // Compile and minify JS & CSS, run Jekyll build for production 
+  grunt.registerTask('build', [
+    'clean:all',
+    'compass:build',
+    'browserify:build',
+    'concat:build',
+    'cssmin',
+    'uglify',
+    'clean:buildTemp',
+    'jekyll-production'
+  ]);
+
+  grunt.registerTask('default', ['debug']);
+
 };

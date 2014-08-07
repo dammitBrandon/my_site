@@ -236,12 +236,11 @@
 
 #post-wrapper
 {
-    /*min-height: 10em;*/
-    height: auto;
+    min-height: 30em;
     background-image: url('../images/me3.jpg');
     background-repeat:no-repeat;
-    background-size: contain;
-
+    background-position: 50% 0;
+    background-size: 50%;
 }
 
 

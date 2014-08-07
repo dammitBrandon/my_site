@@ -1,5 +1,5 @@
 name: Team BBailey
 markdown: redcarpet
-pygments: true
+highlighter: true
 
 #url: http://localhost:4000

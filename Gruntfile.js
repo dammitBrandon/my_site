@@ -72,7 +72,8 @@ module.exports = function (grunt) {
           'debug/style-desktop.css': ['css/style-desktop.css'],
           'debug/style-mobile.css': ['css/style-mobile.css'],
           'debug/syntax.css': ['css/syntax.css'],
-          'debug/skel-noscript.css': ['css/skel-noscript.css']
+          'debug/skel-noscript.css': ['css/skel-noscript.css'],
+          'debug/font-awesome.css': ['bower_components/fontawesome/css/font-awesome.css']
         }
       },
       build: {

@@ -68,7 +68,7 @@ module.exports = function (grunt) {
       debug: {
         files: {
           'debug/style.css': ['css/style.css'],
-          'debug/style-1000.css': ['css/style-1000.css'],
+          'debug/style-1000px.css': ['css/style-1000px.css'],
           'debug/style-desktop.css': ['css/style-desktop.css'],
           'debug/style-mobile.css': ['css/style-mobile.css'],
           'debug/syntax.css': ['css/syntax.css'],

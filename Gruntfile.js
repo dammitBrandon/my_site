@@ -19,16 +19,19 @@ module.exports = function (grunt) {
       options: {
         // Shim 3rd party libraries
         shim: {
-          'bootstrap': {path: 'bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap.js', exports: 'bootstrap'},
-          'jquery': {path: 'bower_components/jquery/dist/jquery.js', exports: 'jQuery'},
-          'fastclick': {path: 'bower_components/fastclick/lib/fastclick.js', exports: 'jQuery'},
-          'jquery-jail': {path: 'bower_components/JAIL/src/jail.js', exports: 'jail'},
-          'skeljs': {path: 'bower_components/skeljs/src/skel.js', exports: 'skel'}
-
+//          'bootstrap': {path: 'bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap.js', exports: 'bootstrap'},
+          'jquery': {path: 'bower_components/jquery/dist/jquery.js', exports: '$'},
+          'dropotron': {path: 'js/jquery_dropotron/jquery.dropotron.js', exports: 'dropotron'},
+//          'fastclick': {path: 'bower_components/fastclick/lib/fastclick.js', exports: 'jQuery'},
+//          'jquery-jail': {path: 'bower_components/JAIL/src/jail.js', exports: 'jail'},
+          'skeljs': {path: 'bower_components/skeljs/src/skel.js', exports: 'skel'},
+  
+          'skelpanelsjs': {path: 'bower_components/skeljs/src/skel.js', exports: 'skelpanels'}
+//
         }
       },
       debug: {
-        src: ['app/main.js'],
+        src: ['js/**/*.js'],
         dest: 'debug/app.js',
         options: {
           debug: true
@@ -43,7 +46,6 @@ module.exports = function (grunt) {
 //    Compile Sass files to CSS
     compass: {
       options: {
-        require: 'compass-inuit',
         sassDir: 'sass'
       },
       debug: {
@@ -65,7 +67,12 @@ module.exports = function (grunt) {
     concat: {
       debug: {
         files: {
-          'debug/style.css': ['css/style.css', 'css/syntax.css']
+          'debug/style.css': ['css/style.css'],
+          'debug/style-1000.css': ['css/style-1000.css'],
+          'debug/style-desktop.css': ['css/style-desktop.css'],
+          'debug/style-mobile.css': ['css/style-mobile.css'],
+          'debug/syntax.css': ['css/syntax.css'],
+          'debug/skel-noscript.css': ['css/skel-noscript.css']
         }
       },
       build: {
@@ -124,6 +131,10 @@ module.exports = function (grunt) {
           watch: true
         }
       },
+//      debug: {
+//        src: 'debug',
+//        dest: './_site/debug/'
+//      },
       build: {
         options: {
           serve: false
@@ -142,6 +153,7 @@ module.exports = function (grunt) {
       'browserify:debug',
       'concat:debug'
     ]);
+//    grunt.task.run('jekyll:debug');
     // Watch for changes
     grunt.task.run('watch');
   });
@@ -160,7 +172,6 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:all',
     'compass:build',
-    'browserify:build',
     'concat:build',
     'cssmin',
     'uglify',

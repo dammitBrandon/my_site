@@ -3,30 +3,35 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+var $ = require('jquery');
 
-window._skel_config = {
-	preset: 'standard',
-	prefix: 'css/style',
-	resetCSS: true,
-	breakpoints: {
-		'desktop': {
-			grid: {
-				gutters: 50
-			}
-		}
-	}
-};
+window.globalVar = 'config';
 
-window._skel_panels_config = {
-	preset: 'standard'
-};
+module.exports = function () {
+  window._skel_config = {
+    preset: 'standard',
+    prefix: 'debug/style',
+    resetCSS: true,
+    breakpoints: {
+      'desktop': {
+        grid: {
+          gutters: 50
+        }
+      }
+    }
+  };
 
-jQuery(function() {
-	$('#nav > ul').dropotron({ 
-		offsetY: -17,
-		offsetX: -1,
-		mode: 'fade',
-		noOpenerFade: true,
-		detach: false
-	});
-});
+  window._skel_panels_config = {
+    preset: 'standard'
+  };
+
+  jQuery(function() {
+    $('#nav > ul').dropotron({
+      offsetY: -17,
+      offsetX: -1,
+      mode: 'fade',
+      noOpenerFade: true,
+      detach: false
+    });
+  });
+}();

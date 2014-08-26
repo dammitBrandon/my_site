@@ -9,23 +9,12 @@ exclude: [
   'package.json',
   'Gemfile',
   'Gemfile.lock',
-  'css',
-  'sass',
-  'js',
-  'env',
-  'tmp'
+##  'css',
+#  'sass',
+##  'js',
+#  'env',
+#  'tmp'
   ]
 
-assets:
-  root_url: '/assets'
-  
-images:
-  root_url: '/assets/img'
-  retina: true
-  retina_suffix: '@2x'
-  lazy: true
-  lazy_placeholder: 'loading.gif'
-  
-disqus:
-  shortname: 'BBailey'
-#url: http://localhost:4000
+destination: ./_site
+show_disqus: false

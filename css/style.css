@@ -10,13 +10,7 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-@font-face {
-    font-family: 'FontAwesome';
-    src: url('font/fontawesome-webfont.eot');
-    src: url('font/fontawesome-webfont.eot') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff') format('woff'), url('fonts/fontawesome-webfont.ttf') format('truetype'), url('fonts/fontawesome-webfont.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face{font-family:'FontAwesome';src:url('/assets/fonts/fontawesome-webfont.eot?v=4.0.1');src:url('/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('/assets/fonts/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('/assets/fonts/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('/assets/fonts/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
 
 	*
 	{
@@ -532,32 +526,32 @@
 /* Licensed under the SIL OFL 1.1 (font), MIT (CSS)                              */
 /*********************************************************************************/
 
-	/*.fa*/
-	/*{*/
-		/*text-decoration: none;*/
-	/*}*/
+	.fa
+	{
+		text-decoration: none;
+	}
 
-		/*.fa.solo*/
-		/*{*/
-		/*}*/
-		/**/
-			/*.fa.solo span*/
-			/*{*/
-				/*display: none;*/
-			/*}*/
+		.fa.solo
+		{
+		}
+		
+			.fa.solo span
+			{
+				display: none;
+			}
 
-		/*.fa:before*/
-		/*{*/
-			/*display:inline-block;*/
-			/*font-family: FontAwesome;*/
-			/*font-size: 1.25em;*/
-			/*text-decoration: none;*/
-			/*font-style: normal;*/
-			/*font-weight: normal;*/
-			/*line-height: 1;*/
-			/*-webkit-font-smoothing:antialiased;*/
-			/*-moz-osx-font-smoothing:grayscale;*/
-		/*}*/
+		.fa:before
+		{
+			display:inline-block;
+			font-family: FontAwesome;
+			font-size: 1.25em;
+			text-decoration: none;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			-webkit-font-smoothing:antialiased;
+			-moz-osx-font-smoothing:grayscale;
+		}
 
 		/*.fa-lg{font-size:1.3333333333333333em;line-height:.75em;vertical-align:-15%}*/
 		/*.fa-2x{font-size:2em}*/

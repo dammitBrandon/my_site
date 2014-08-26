@@ -9,20 +9,18 @@
 
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet"/>
 
-  {% if site.env == 'production' %}
-    <link rel="stylesheet" href="/build/style.min.css"/>
-  {% else %}
-  <link rel="stylesheet" href="/debug/main.css">
-  <link rel="stylesheet" href="/debug/font-awesome.css">
+
+  <!--<link rel="stylesheet" href="/css/syntax.css">-->
+  <link rel="stylesheet" href="/css/font-awesome.css">
   <noscript>
-    <link rel="stylesheet" href="/debug/skel-noscript.css" />
-    <link rel="stylesheet" href="/debug/style.css" />
-    <link rel="stylesheet" href="/debug/style-desktop.css" />
+    <link rel="stylesheet" href="/css/skel-noscript.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style-desktop.css" />
   </noscript>
-  {% endif %}
 
   <!--[if lte IE 8]/>
-  <script src="js/html5shiv.js></script><link rel="stylesheet" href="css/ie8.css" />
+  <script src="js/html5shiv.js></script>
+  <link rel="stylesheet" href="css/ie8.css" />
   <![endif]>-->
 
 </head>
@@ -46,13 +44,12 @@
 
 {%include footer.html%}
 
-{% if site.env == 'production'%}
-  <script src="/build/app.min.js"></script>
-  
-{% else %}
-
-<script src="/debug/app.js"></script>
-{% endif %}
+<script type="application/javascript" src="/js/jquery.js"></script>
+<script type="application/javascript" src="/js/jquery.dropotron.js"></script>
+<script type="application/javascript" src="/js/skel.js"></script>
+<script type="application/javascript" src="/js/skel-panels.js"></script>
+<script type="application/javascript" src="/js/main.js"></script>
+<script type="application/javascript" src="/js/config.js"></script>
 
 </body>
 

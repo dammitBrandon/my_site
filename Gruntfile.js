@@ -15,7 +15,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             flatten: true,
-            src: ['bower_components/jquery/dist/jquery.js', 'bower_components/jquery_dropotron/jquery.dropotron.js', 'bower_components/skeljs/src/skel.js', 'bower_components/skeljs/src/skel-panels.js'],
+            src: ['bower_components/jquery/dist/jquery.js', 'bower_components/jquery_dropotron/jquery.dropotron.js', 'bower_components/skeljs/src/skel.js', 'bower_components/skeljs/src/skel-panels.js', 'bower_components/bootstrap/dist/js/bootstrap.js'],
             dest: './js',
             filter: 'isFile' 
           }

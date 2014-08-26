@@ -13,6 +13,7 @@
 		line-height: 1.75em;
 		font-size: 11pt;
 		letter-spacing: 0;
+        position: relative;
 	}
 
 	h2, h3, h4, h5, h6

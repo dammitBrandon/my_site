@@ -10,12 +10,12 @@
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet"/>
 
 
-  <!--<link rel="stylesheet" href="/css/syntax.css">-->
-  <link rel="stylesheet" href="/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <!--<link rel="stylesheet" href="/css/font-awesome.css">-->
   <noscript>
-    <link rel="stylesheet" href="/css/skel-noscript.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/style-desktop.css" />
+    <link rel="stylesheet" href="/css/skel-noscript.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/style-desktop.css"/>
   </noscript>
 
   <!--[if lte IE 8]/>
@@ -25,32 +25,37 @@
 
 </head>
 
-<body class="homepage">
+<body class="homepage" id="scroll-area">
+<!--<div >-->
+  <!-- Header Wrapper -->
+  <div id="header-wrapper">
+    <div class="container">
+      {%include header.html%}
+    </div>
 
-<!-- Header Wrapper -->
-<div id="header-wrapper">
-  <div class="container">
-    {%include header.html%}
+    {% if page.url == '/index.html' %}
+    {%include hero.html%}
+    {% endif %}
+
   </div>
+  <!-- header wrapper -->
 
-  {% if page.url == '/index.html' %}
-  {%include hero.html%}
-  {% endif %}
+  {{ content }}
 
-</div>
-<!-- header wrapper -->
-
-{{ content }}
-
-{%include footer.html%}
+  {%include footer.html%}
+<!--</div>-->
 
 <script type="application/javascript" src="/js/jquery.js"></script>
 <script type="application/javascript" src="/js/jquery.dropotron.js"></script>
+<script type="application/javascript" src="/js/bootstrap.js"></script>
 <script type="application/javascript" src="/js/skel.js"></script>
 <script type="application/javascript" src="/js/skel-panels.js"></script>
 <script type="application/javascript" src="/js/main.js"></script>
 <script type="application/javascript" src="/js/config.js"></script>
 
+<script type="application/javascript">
+  $('body#scroll-area').scrollspy({target: '.navbar-main'});
+</script>
 </body>
 
 </html>

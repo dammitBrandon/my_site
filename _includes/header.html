@@ -1,19 +1,23 @@
 <div class="row">
-    <div class="12u">
-        <!-- header -->
-        <section id="header">
-            <h1><a href="/index.html">Team BBailey</a></h1>
+  <div class="12u">
+    <!-- header -->
+    <section id="header">
+      <h1><a href="/index.html">Team BBailey</a></h1>
 
-            <!-- nav -->
-            <nav id="nav">
-                <ul>
-                    <li class="current_page_item"><a href="{{ base.url }}/">Home</a></li>
-                    <li><a href="#">Blog Posts</a></li>
-                    <li><a href="#main-wrapper">My Story</a></li>
-                    <li><a href="#footer-wrapper">What I stand for</a></li>
-                </ul>
-            </nav>
-            <!-- nav -->
-        </section>
-    </div>
+      <!-- nav -->
+      <nav id="nav" class="navbar-main">
+        <ul class="nav">
+          {% if page.url == '/index.html' %}
+          <li class="active"><a href="#header-wrapper">Home</a></li>
+          {% else %}
+          <li class="active"><a href="{{ base.url }}/">Home</a></li>
+          {% endif %}
+          <li><a href="#my-story">My Story</a></li>
+          <li><a href="#blog-posts">Blog Posts</a></li>
+          <li><a href="#footer-wrapper">What I stand for</a></li>
+        </ul>
+      </nav>
+      <!-- nav -->
+    </section>
+  </div>
 </div>

@@ -68,12 +68,12 @@
 			height: 10em;
 		}
 	
-	#main-wrapper
+	#main-wrapper, #blog-wrapper
 	{
 		padding: 2.75em 0 2.75em 0;
 	}
 
-		#main-wrapper:after
+		#main-wrapper:after, #blog-wrapper:after
 		{
 			height: 2.5em;
 		}
@@ -97,6 +97,11 @@
 			{
 				font-size: 1.25em;
 			}
+
+#contact-me
+{
+    margin-top: 20px;
+}
 
 /*********************************************************************************/
 /* Header                                                                        */

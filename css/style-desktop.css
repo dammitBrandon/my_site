@@ -174,12 +174,12 @@
 			top: -2.5em;
 		}
 	
-	#main-wrapper
+	#main-wrapper, #blog-wrapper
 	{
 		padding: 6em 0 6em 0;
 	}
 
-		#main-wrapper:after
+		#main-wrapper:after, #blog-wrapper:after
 		{
 			height: 5em;
 		}
@@ -209,6 +209,11 @@
 			padding-bottom: 2em;
 		}
 
+#contact-me
+{
+    margin-top: 20px;
+}
+
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
@@ -231,8 +236,9 @@
 /* Nav                                                                           */
 /*********************************************************************************/
 
-	#nav
+	#nav .navbar-main
 	{
+        height: auto;
 	}
 
 		#nav > ul

@@ -1031,13 +1031,13 @@
 			z-index: 1;
 		}
 	
-	#main-wrapper
+	#main-wrapper, #blog-wrapper
 	{
 		position: relative;
 		background: #f7f7f7 url('/images/bg02.png');
 	}
 
-		#main-wrapper:before
+		#main-wrapper:before, #blog-wrapper:before
 		{
 			content: '';
 			position: absolute;
@@ -1050,11 +1050,11 @@
 			opacity: 0.1;
 		}
 		
-		#main-wrapper .major
+		#main-wrapper .major, #blog-wrapper .major
 		{
 		}
 		
-			#main-wrapper .major h2
+			#main-wrapper .major h2, #blog-wrapper .major h2
 			{
 				background: #f7f7f7 url('/images/bg02.png');
 			}
@@ -1126,6 +1126,11 @@
 			border-top-color: #353434;
 			border-top-color: rgba(255,255,255,0.05);
 		}
+        
+        #contact-me 
+        {
+            margin-top: 20px;
+        }
 		
 /*********************************************************************************/
 /* Intro                                                                         */

@@ -25,10 +25,10 @@
 
 </head>
 
-<body class="homepage" id="scroll-area">
+<body class="homepage" data-spy="scroll">
 <!--<div >-->
   <!-- Header Wrapper -->
-  <div id="header-wrapper" class="headerWrapper">
+  <div id="header-wrapper" class="header-wrapper">
     <div class="container">
       {%include header.html%}
     </div>
@@ -47,7 +47,7 @@
 
 <script type="application/javascript" src="/js/jquery.js"></script>
 <script type="application/javascript" src="/js/jquery.dropotron.js"></script>
-<script type="application/javascript" src="/js/jquery.smint.js"></script>
+<!--<script type="application/javascript" src="/js/jquery.smint.js"></script>-->
 <script type="application/javascript" src="/js/bootstrap.js"></script>
 <script type="application/javascript" src="/js/skel.js"></script>
 <script type="application/javascript" src="/js/skel-panels.js"></script>
@@ -55,9 +55,9 @@
 <script type="application/javascript" src="/js/main.js"></script>
 
 <!--still working on scrollspy-->
-<!--<script type="application/javascript">-->
-  <!--$('body#scroll-area').scrollspy({target: '.navbar-main'});-->
-<!--</script>-->
+<script type="application/javascript">
+  $('body').scrollspy({target: '.navbar-main'});
+</script>
 </body>
 
 </html>

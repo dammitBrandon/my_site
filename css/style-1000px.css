@@ -12,6 +12,7 @@
 	{
 		font-size: 10.5pt;
 		min-width: 1000px;
+        height: 100%;
         position: relative;
 	}
 
@@ -53,37 +54,37 @@
 /* Wrappers                                                                      */
 /*********************************************************************************/
 
-	#header-wrapper
+	#header-wrapper:not(a)
 	{
 		padding: 4em 0 4em 0;
 	}
 
-		#header-wrapper:before
+		#header-wrapper:not(a):before
 		{
 			height: 7.5em;
 		}
 	
-		#header-wrapper:after
+		#header-wrapper:not(a):after
 		{
 			height: 10em;
 		}
 	
-	#main-wrapper, #blog-wrapper
+	#main-wrapper:not(a), #blog-wrapper:not(a)
 	{
 		padding: 2.75em 0 2.75em 0;
 	}
 
-		#main-wrapper:after, #blog-wrapper:after
+		#main-wrapper:not(a):after, #blog-wrapper:not(a):after
 		{
 			height: 2.5em;
 		}
 	
-	#footer-wrapper
+	#footer-wrapper:not(a)
 	{
 		padding: 3em 0 3em 0;
 	}
 
-		#footer-wrapper:before
+		#footer-wrapper:not(a):before
 		{
 			height: 2.5em;
 		}
@@ -98,7 +99,7 @@
 				font-size: 1.25em;
 			}
 
-#contact-me
+#contact-me:not(a)
 {
     margin-top: 20px;
 }

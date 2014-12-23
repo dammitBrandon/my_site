@@ -1,6 +1,7 @@
 name: 'Team BBailey'
 markdown: redcarpet
 highlighter: pygments
+encoding: "utf-8"
 exclude: [
   'node_modules',
   'bower_components',

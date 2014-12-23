@@ -1040,13 +1040,13 @@
 			z-index: 1;
 		}
 	
-	#main-wrapper:not(a), #blog-wrapper:not(a)
+	#main-wrapper:not(a), #blog-wrapper:not(a), #post-wrapper:not(a), #blog-wrapper:not(a)
 	{
 		position: relative;
 		background: #f7f7f7 url('/images/bg02.png');
 	}
 
-		#main-wrapper:not(a):before, #blog-wrapper:not(a):before
+		#main-wrapper:not(a):before, #blog-wrapper:not(a):before, #post-wrapper:not(a):before
 		{
 			content: '';
 			position: absolute;
@@ -1063,15 +1063,12 @@
 		{
 		}
 		
-			#main-wrapper .major h2, #blog-wrapper .major h2
+			#main-wrapper .major h2, #blog-wrapper .major h2, #post-wrapper .major h2
 			{
 				background: #f7f7f7 url('/images/bg02.png');
 			}
 
-    #post-wrapper
-    {
-        background: url('/images/bg01.png');
-    }
+    
 
 	#footer-wrapper:not(a)
 	{

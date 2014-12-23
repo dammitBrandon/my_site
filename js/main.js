@@ -19,4 +19,5 @@ $(document).ready(function () {
   $('.navbar-main').smint({
     'scrollSpeed': 1000
   });
+  
 });

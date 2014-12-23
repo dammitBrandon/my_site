@@ -3,12 +3,23 @@ layout: default
 ---
 
 
-
 <div id="post-wrapper">
-    <h2>{{ page.title }}</h2>
+  <div class="container">
+    <!-- div.row -->
+    <div class="row">
+      <div class="12u">
+        <section>
+            <header class="major">
+              <h2>{{ page.title }}</h2>
+            </header>
 
-    <p class="meta">{{ page.date | date_to_string }}</p>
-    <div class="post">
-        {{ content }}
+            <p class="meta">{{ page.date | date_to_string }}</p>
+
+            <div class="post">
+              {{ content }}
+            </div>
+        </section>
+      </div>
     </div>
-</div>
+  </div>
+</div> <!-- Post Wrapper -->

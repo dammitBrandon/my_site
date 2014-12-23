@@ -175,12 +175,12 @@
 			top: -2.5em;
 		}
 	
-	#main-wrapper, #blog-wrapper
+	#main-wrapper, #blog-wrapper, #post-wrapper
 	{
 		padding: 6em 0 6em 0;
 	}
 
-		#main-wrapper:after, #blog-wrapper:after
+		#main-wrapper:after, #blog-wrapper:after, #post-wrapper:after
 		{
 			height: 5em;
 		}

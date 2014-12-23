@@ -19,3 +19,4 @@ exclude: [
 
 destination: ./_site
 show_disqus: false
+url: http://localhost:4000/

@@ -11,13 +11,12 @@ $(document).ready(function () {
     $('#home-page-image').attr('src', 'images/me2.jpg');
   }
 
-// adds and removes .active from menu links
-//  $('nav#nav ul li a').click(function(e) {
-//    var $this = $(this);
-//    if (!$this.parent().hasClass('active')) { $this.parent().addClass('active').siblings().removeClass('active');}
-//  });
-  
-//  $('.navbar-main').smint({
-//    'scrollSpeed': 1000
-//  });
+  $('body').scrollspy({
+    target: '.navbar-main',
+    offset:  -500
+  });
+
+  $('.navbar-main').smint({
+    'scrollSpeed': 1000
+  });
 });

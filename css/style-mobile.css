@@ -197,6 +197,11 @@
 			font-style: italic;
 		}
 		
+        div > nav > a.active
+        {
+            background: #d52349;
+            color: #fff !important;
+        }
 			#navPanel .link:first-child
 			{
 				border-top: 0;
@@ -308,7 +313,7 @@
 /* Nav                                                                           */
 /*********************************************************************************/
 
-	#nav .navbar-main
+	#nav
 	{
 		display: none;
 	}

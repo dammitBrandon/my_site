@@ -18,46 +18,44 @@
     <link rel="stylesheet" href="/css/style-desktop.css"/>
   </noscript>
 
-  <!--[if lte IE 8]/>
-  <script src="js/html5shiv.js></script>
-  <link rel="stylesheet" href="css/ie8.css" />
-  <![endif]>-->
+  <!--[if lte IE 8]>
+  <script src="js/html5shiv.js"></script>
+  <link rel="stylesheet" href="css/ie8.css"/>
+  <![endif]-->
 
 </head>
 
-<body class="homepage" data-spy="scroll">
-<!--<div >-->
-  <!-- Header Wrapper -->
-  <div id="header-wrapper" class="header-wrapper">
-    <div class="container">
-      {%include header.html%}
-    </div>
-
-    {% if page.url == '/index.html' %}
-    {%include hero.html%}
-    {% endif %}
-
+<body class="homepage" id="scroll-area">
+<!-- Header Wrapper -->
+<div id="header-wrapper" class="header-wrapper">
+  <div class="container">
+    {%include header.html%}
   </div>
-  <!-- header wrapper -->
 
-  {{ content }}
+  {% if page.url == '/index.html' %}
+  {%include hero.html%}
+  {% endif %}
 
-  {%include footer.html%}
-<!--</div>-->
+</div>
+<!-- header wrapper -->
+
+{{ content }}
+
+{%include footer.html%}
 
 <script type="application/javascript" src="/js/jquery.js"></script>
 <script type="application/javascript" src="/js/jquery.dropotron.js"></script>
-<!--<script type="application/javascript" src="/js/jquery.smint.js"></script>-->
+<script>
+  if (screen && screen.width > 480) {
+    $.getScript("/js/jquery.smint.js");
+  }
+</script>
 <script type="application/javascript" src="/js/bootstrap.js"></script>
 <script type="application/javascript" src="/js/skel.js"></script>
 <script type="application/javascript" src="/js/skel-panels.js"></script>
 <script type="application/javascript" src="/js/config.js"></script>
 <script type="application/javascript" src="/js/main.js"></script>
 
-<!--still working on scrollspy-->
-<script type="application/javascript">
-  $('body').scrollspy({target: '.navbar-main'});
-</script>
 </body>
 
 </html>

@@ -5,15 +5,15 @@
       <h1><a href="/index.html">Team BBailey</a></h1>
 
       <!-- nav -->
-      <nav id="nav" class="navbar-main">
+      <nav id="nav" class="navbar-main" role="navigation">
         <ul class="nav">
           {% if page.url == '/index.html' %}
           <li class="active"><a href="#header-wrapper">Home</a></li>
-          {% else %}
-          <li class="active"><a href="{{ base.url }}/">Home</a></li>
-          {% endif %}
-          <li><a href="#my-story">My Story</a></li>
+          <li><a href="#main-wrapper">My Story</a></li>
           <li><a href="#blog-wrapper">Blog Posts</a></li>
+          {% else %}
+          <li class="active"><a href="#header-wrapper">Home</a></li>
+          {% endif %}
           <li><a href="#footer-wrapper">What I stand for</a></li>
           <li><a href="#contact-me">Contact</a></li>
         </ul>

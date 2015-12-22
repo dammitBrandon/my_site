@@ -49,17 +49,12 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				var mySelector = settings.mySelector
 		};
 
-
-
-		return smintA.each( function(index) {
-            
+    return smintA.each( function(index) {
 			var id = $(this).attr('href').split('#')[1];
-
 			if (!$(this).hasClass("extLink")) {
 				$(this).attr('id', id);
 			}
-
-			
+      
 			//Fill the menu
 			optionLocs.push(Array(
 				$(mySelector+"."+id).position().top-menuHeight, 
@@ -92,11 +87,13 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 
 				// Check if the position is inside then change the menu
 				// Courtesy of Ryan Clarke (@clarkieryan)
-				if(optionLocs[index][0] <= scrollTop && scrollTop <= optionLocs[index][1]){	
+        
+				if(optionLocs[index][0] <= scrollTop && scrollTop <= optionLocs[index][1]){
+      console.log('right here');
 					if(direction == "up"){
 						$("#"+id).addClass("active");
 						$("#"+optionLocs[index+1][2]).removeClass("active");
-					} else if(index > 0) {
+          } else if(index > 0) {
 						$("#"+id).addClass("active");
 						$("#"+optionLocs[index-1][2]).removeClass("active");
 					} else if(direction == undefined){

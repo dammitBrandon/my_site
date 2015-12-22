@@ -34,6 +34,9 @@
 
   {% if page.url == '/index.html' %}
   {%include hero.html%}
+  {% elsif page.url == '/gerrod-wilson.html'%}
+  <p>gerrod page!!!</p>
+  {%include gerrod-hero.html%}
   {% endif %}
 
 </div>
@@ -45,6 +48,7 @@
 
 <script type="application/javascript" src="/js/jquery.js"></script>
 <script type="application/javascript" src="/js/jquery.dropotron.js"></script>
+<script type="application/javascript" src="/js/scrollspy.js"></script>
 <script>
   if (screen && screen.width > 480) {
     $.getScript("/js/jquery.smint.js");

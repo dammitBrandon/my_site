@@ -473,8 +473,18 @@
 			ul.social li a.fa-tumblr:hover		{ background: #3b5671; }
 			ul.social li a.fa-google-plus		{ background: #da2713; }
 			ul.social li a.fa-google-plus:hover	{ background: #ea3723; }
+      ul.social li a.fa-github	{ background: #dcad8b; }
+      ul.social li a.fa-github:hover	{ background: #e1b89b; }
+      ul.social li a.fa-instagram { 
+        background: url("../assets/images/instagram_gradient.png") no-repeat;
+        background-size: cover;
+      }
+      /*ul.social li a.fa-instagram:hover {*/
+        /*background-image: linear-gradient(rgba(0,0,0,0.1) 100%,rgba(0,0,0,0.8) 100%), url(../assets/images/instagram_gradient.png);*/
+        /*opacity: 0.2;*/
+      /*}*/
 
-	/* Pennant */
+/* Pennant */
 
 		.pennant
 		{

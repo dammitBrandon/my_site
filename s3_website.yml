@@ -1,6 +1,7 @@
-s3_id: YOUR_AWS_S3_ACCESS_KEY_ID
-s3_secret: YOUR_AWS_S3_SECRET_ACCESS_KEY
-s3_bucket: your.blog.bucket.com
+s3_id: AKIAJ2ZBX2ZAPCDVKVWA
+s3_secret: 6LTpT/+I12aNFE33czip0z1yJtI0izl9FYSjquBR
+s3_bucket: teambbailey.io
+cloudfront_distribution_id: E2TVJSKRK07BDU
 
 # Below are examples of all the available configurations.
 # See README for more detailed info on each of them.

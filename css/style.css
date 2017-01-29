@@ -40,6 +40,11 @@
         height: 100%;
 	}
 
+	sup
+	{
+		vertical-align: super;
+		font-size: smaller;
+	}
 	strong, b
 	{
 		color: #252122;

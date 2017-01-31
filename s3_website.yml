@@ -1,5 +1,5 @@
-s3_id: AKIAJ2ZBX2ZAPCDVKVWA
-s3_secret: 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
+s3_id:
+s3_secret:
 s3_bucket: teambbailey.io
 cloudfront_distribution_id: E2TVJSKRK07BDU
 
